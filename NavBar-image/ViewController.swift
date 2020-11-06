@@ -11,9 +11,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setNavigationBar()
     }
-
-
+    
+    private func setNavigationBar() {
+        let image = UIImage(named: "eye")
+        
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = imageView
+    }
 }
 
